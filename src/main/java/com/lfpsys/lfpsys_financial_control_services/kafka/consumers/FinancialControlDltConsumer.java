@@ -2,6 +2,7 @@ package com.lfpsys.lfpsys_financial_control_services.kafka.consumers;
 
 import static com.lfpsys.lfpsys_financial_control_services.kafka.KafkaConfig.DLT_TOPIC_NAME;
 import static com.lfpsys.lfpsys_financial_control_services.nfe_upload.NfeUploadProcessStatus.ERROR;
+import static com.lfpsys.lfpsys_financial_control_services.nfe_upload.NfeUploadProcessType.UPDATE_FINANCIAL_CONTROLS;
 import static java.lang.String.format;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -38,7 +39,7 @@ public class FinancialControlDltConsumer {
       status
           .getProcesses()
           .forEach(nfeUploadProcess -> {
-            if (NfeUploadProcessType.UPDATE_FINANCIAL_CONTROLS.equals(nfeUploadProcess.getProcess())) {
+            if (UPDATE_FINANCIAL_CONTROLS.equals(nfeUploadProcess.getProcess())) {
               nfeUploadProcess.setStatus(ERROR);
             }
           });
