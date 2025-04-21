@@ -6,7 +6,6 @@ import static java.lang.String.format;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.lfpsys.lfpsys_financial_control_services.nfe_upload.NfeUploadProcessStatus;
 import com.lfpsys.lfpsys_financial_control_services.nfe_upload.NfeUploadProcessType;
 import com.lfpsys.lfpsys_financial_control_services.nfe_upload.NfeUploadStatusDto;
 import java.util.UUID;
